@@ -168,8 +168,7 @@ public class SearchUtils {
 					whereClause.append(param.getName()).append(" " + operator + " ").append(":" + param.getName());
 				}
 
-				if(!preparedStatementValues.containsKey(param.getName()))
-					preparedStatementValues.put(param.getName(), paramValue);
+				preparedStatementValues.put(param.getName(), paramValue);
 			}
 		} catch (Exception e) {
 			log.error("Exception while bulding query: ", e);
