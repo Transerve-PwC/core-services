@@ -54,6 +54,14 @@ public class Transaction {
     @JsonProperty("module")
     @Size(min = 1)
     private String module;
+    
+    /**
+	 * Backward compatibility
+	 */
+	@JsonProperty("moduleId")
+	@Size(min = 1)
+	private String moduleId;
+
 
     /**
      * Backward compatibility
